@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Application</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/index.css">
+<script src="Scripts/jquery-3.6.0.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="title">
+        <img src="icons/chat.png" width:"35px">
+        <h1>Chat App</h1>
+      </div>
+      <button type="button" onclick="show_hide()">
+          <img src="icons/menu.png" width:"40px"/>
+      </button>
+    </header>
+
+    <div class="contianer">
+      <div class="users-window">
+
+        <div class="users-head">
+          <h3>People</h3>
+          <h4 class="users-count">0</h4>
+        </div>
+        <div class="users-list">
+          
+        </div>
+      </div>
+
+            <div class="chat-window">
+                <div class="chats">
+                    <!--
+     <div class="user-join">
+     <p><b>Allo</b>Joined the chat</p>
+    </div>
+
+    <div class="message incoming">
+      <h5>Allo</h5>
+      <p>Hello Ultron</p>
+    </div>
+    <div class="message outgoing">
+      <h5>Akhi</h5>
+      <p>Welcome to Allo</p>
+    </div>
+    -->
+                </div>
+              <div class="user-input">
+                <input id="users-msg" type="text" placeholder="type your message..."/>
+                <button id="users-send" type="button" class="btn">Send</button>
+                <button id="users-addFile" type="button" class=" filebtn">Add File</button>
+              </div>
+              
+              <script>
+                $(document).ready(function(){
+                    $(".filebtn").click(function(){
+                        $("#file").trigger("click");
+                    })
+
+                })
+              </script>
+            </div>
+
+    </div>
+  </main>
+<script>
+  var uwindow=document.querySelector(".users-window");
+  function show_hide(){
+    if(uwindow.style.display=="block"){
+      uwindow.style.display="none";
+    }
+    else{
+      uwindow.style.display="block";
+    }
+  }
+</script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/client.js"></script>
+
+</body>
+</html>

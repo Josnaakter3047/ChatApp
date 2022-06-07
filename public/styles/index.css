@@ -1,0 +1,203 @@
+
+/*font-family: 'Baloo 2', cursive;
+  font-family: 'Poppins', sans-serif;*/
+
+ :root{
+  --aqua:#4d6180;
+  --red:#da698d;
+  --gray:#798691;
+  --blue: rgb(22, 26, 83);
+  --white:#f5f8fa;
+ }
+ :root{
+   --font-text: 'Poppins', sans-serif;
+  --font-heading: 'Baloo 2', cursive;
+  --fsize:16px;
+ }
+  
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: var(--font-text);
+}
+::-webkit-scrollbar {
+    display:none;
+}
+main{
+position: absolute;
+top:50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width:80%;
+overflow:hidden;
+border-radius: 10px; 
+}
+header{
+  background-color:var(--aqua);
+  color:var(--white);
+  padding:7px 20px;
+  display: flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content: space-between;
+ 
+}
+div.title{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content:flex-start;
+}
+h1 {
+    font-family: --font-heading;
+    font-size:32px;
+    margin-left:10px;
+}
+header button{
+  background-color: transparent;
+  border:none;
+  outline:none;
+  display:none;
+}
+div.contianer{
+  width:100%;
+  background-color: var(--gray);
+  padding:20px;
+  display: flex;
+  flex-direction: row;
+  align-items:stretch;
+  justify-content:flex-start;
+}
+.users-window{
+  width:350px;
+  color:var(--white);
+  background-color: var(--aqua);
+  padding:15px 20px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+.users-head{
+  display: flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+ 
+}
+h4{
+  background-color: var(--gray);
+  padding:0 8px;
+  border-radius:50px;
+}
+div.users-list p{
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  
+}
+.chat-window{
+  width:100%;
+  border-radius: 10px;
+  background-color: var(--aqua);
+  
+}
+.chats{
+  height: 65vh;
+  padding: 20px;
+  overflow-y:auto;
+}
+.user-join{
+  font-size: 0.9rem;
+  color:var(--gray);
+  background-color: var(--white);
+  border-radius: 50px;
+  width:max-content;
+  padding:7px 20px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+
+}
+.message{
+  color: rgb(47, 66, 2);
+  background-color: lightgray;
+  padding:5px 15px;
+  max-width:400px;
+  margin-bottom:15px;
+  border-radius:10px 50px 50px 10px;
+
+}
+.message p{
+  font-size: var(--fsize);
+}
+.outgoing{
+  margin-left:auto;
+  background-color: rgb(25, 55, 73);
+  color: rgb(206, 202, 202);
+  border-radius: 50px 10px 10px 50px;
+  text-align: right;
+}
+div .user-input{
+  display: flex;
+  flex-direction: row;
+  align-items:stretch;
+  justify-content:space-between;
+  padding:20px;
+}
+.user-input input{
+  font-size: var(--fsize);
+  background-color: lightgray;
+  width: 85%;
+  padding:10px 20px;
+  border-radius: 50px 50px 50px 50px;
+  outline:none;
+  border:none;
+}
+.btn, .filebtn{
+  color: rgb(157, 158, 153);
+  padding:10px;
+  background-color: rgb(25, 55, 73);
+  border-radius: 10px;
+  font-weight: bold;
+  border:none;
+  outline:none;
+  
+}
+@media screen and (max-width:900px){
+  main{
+    width:95%;
+  }
+  
+}
+@media screen and (max-width:900px){
+  div.contianer{
+    position:relative;
+    
+  }
+  .users-window{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    border-radius:0 0 10px 10px;
+    height: max-content;
+    z-index:11;
+    box-shadow: 0 15px 20px -20px black;
+    padding-bottom: 0;
+    display: none;
+  }
+}
+@media screen and (max-width:900px){
+ 
+  div.message{
+    max-width:300px;
+  }
+  header button{
+    display: block;
+  }
+}
+
+
+
+
